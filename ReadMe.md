@@ -13,6 +13,7 @@ r_scripts/
 |__train_and_test_data.R
 |__merge.R
 |__subset.R
+|__summarise.R
 ```
 The main script file is in `run_script.R`. It sources the R files in `r_scripts/` folder and uses the functions declared in those files.
 
@@ -80,5 +81,9 @@ Contains functions shared by the rest of R files.
 * Optionally it saves the new data frame to PSV
 * Returns the new data frame
 
+#### summarise.R
 
+`summarise_data(data, generate_intermediate_files = TRUE)` :
+* Reads data, gorups it by activity and subject, and calculates the mean for every variable, except for the grouped ones.
+* Saves the data to file
 
