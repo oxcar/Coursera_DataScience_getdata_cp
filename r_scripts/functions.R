@@ -25,3 +25,12 @@ write_data_to_csv_file <- function(data, file_name) {
   path <- paste(base_path, file_name, sep = "/")
   write.table(data, path, sep = ",", row.names = FALSE)
 }
+
+write_data_to_table_file <- function(data, file_name) {
+  base_path <- "./generated_files"
+  if(!file.exists(base_path)) {
+    dir.create(base_path)
+  }
+  path <- paste(base_path, file_name, sep = "/")
+  write.table(data, path, row.names = FALSE)
+}

@@ -8,7 +8,7 @@ summarise_data <- function(data, generate_intermediate_files = TRUE) {
     dplyr::summarise_each(funs(mean))
   
   if(generate_intermediate_files == TRUE) {
-    write_data_to_csv_file(summarised, "summarised.csv")
+    write_data_to_table_file(summarised, "summarised.txt")
   }
   summarised
   
